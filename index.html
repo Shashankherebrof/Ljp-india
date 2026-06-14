@@ -1,515 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SJP India - Lizard Janta Party</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
-
-    body{
-      background:#050505;
-      color:white;
-      overflow-x:hidden;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    nav{
-      position:fixed;
-      width:100%;
-      top:0;
-      left:0;
-      z-index:1000;
-      backdrop-filter:blur(12px);
-      background:rgba(0,0,0,0.5);
-      border-bottom:1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-container{
-      max-width:1400px;
-      margin:auto;
-      padding:18px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:800;
-      color:#6fff8c;
-      letter-spacing:1px;
-    }
-
-    .nav-links{
-      display:flex;
-      gap:25px;
-    }
-
-    .nav-links a{
-      color:white;
-      text-decoration:none;
-      transition:0.3s;
-      font-size:15px;
-    }
-
-    .nav-links a:hover{
-      color:#6fff8c;
-    }
-
-    .hero{
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      padding:140px 20px 80px;
-      background:
-      radial-gradient(circle at top,#164a1e 0%,#050505 55%);
-    }
-
-    .hero-content{
-      max-width:950px;
-    }
-
-    .tag{
-      display:inline-block;
-      padding:10px 18px;
-      border:1px solid rgba(255,255,255,0.15);
-      border-radius:40px;
-      margin-bottom:25px;
-      background:rgba(255,255,255,0.05);
-      color:#8fffaa;
-      font-size:14px;
-    }
-
-    .hero h1{
-      font-size:85px;
-      line-height:1;
-      margin-bottom:25px;
-      font-weight:800;
-    }
-
-    .hero h1 span{
-      color:#6fff8c;
-      text-shadow:0 0 20px rgba(111,255,140,0.5);
-    }
-
-    .hero p{
-      color:#cfcfcf;
-      max-width:750px;
-      margin:auto;
-      font-size:20px;
-      line-height:1.8;
-    }
-
-    .buttons{
-      margin-top:40px;
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      padding:16px 32px;
-      border-radius:50px;
-      border:none;
-      cursor:pointer;
-      font-size:16px;
-      font-weight:600;
-      transition:0.3s;
-      text-decoration:none;
-    }
-
-    .btn-primary{
-      background:#6fff8c;
-      color:black;
-      box-shadow:0 0 25px rgba(111,255,140,0.4);
-    }
-
-    .btn-primary:hover{
-      transform:translateY(-5px);
-    }
-
-    .btn-secondary{
-      background:transparent;
-      border:1px solid rgba(255,255,255,0.2);
-      color:white;
-    }
-
-    .btn-secondary:hover{
-      background:white;
-      color:black;
-    }
-
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      gap:25px;
-      margin-top:90px;
-    }
-
-    .card{
-      background:rgba(255,255,255,0.04);
-      border:1px solid rgba(255,255,255,0.08);
-      padding:35px;
-      border-radius:24px;
-      backdrop-filter:blur(10px);
-      transition:0.4s;
-    }
-
-    .card:hover{
-      transform:translateY(-8px);
-      border-color:#6fff8c;
-    }
-
-    .card h2{
-      font-size:55px;
-      color:#6fff8c;
-      margin-bottom:10px;
-    }
-
-    .section{
-      max-width:1200px;
-      margin:auto;
-      padding:120px 20px;
-    }
-
-    .section-title{
-      font-size:60px;
-      margin-bottom:20px;
-      text-align:center;
-      font-weight:800;
-    }
-
-    .section-sub{
-      color:#c4c4c4;
-      text-align:center;
-      max-width:700px;
-      margin:0 auto 60px;
-      line-height:1.8;
-    }
-
-    .manifesto-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:25px;
-    }
-
-    .manifesto-card{
-      background:#0d0d0d;
-      border:1px solid rgba(255,255,255,0.08);
-      border-radius:28px;
-      padding:35px;
-      transition:0.3s;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .manifesto-card::before{
-      content:'';
-      position:absolute;
-      width:180px;
-      height:180px;
-      background:#6fff8c22;
-      border-radius:50%;
-      top:-80px;
-      right:-80px;
-    }
-
-    .manifesto-card:hover{
-      transform:translateY(-8px);
-      border-color:#6fff8c;
-    }
-
-    .manifesto-card h3{
-      font-size:26px;
-      margin-bottom:15px;
-      color:#6fff8c;
-    }
-
-    .manifesto-card p{
-      color:#cfcfcf;
-      line-height:1.7;
-    }
-
-    .speech{
-      background:linear-gradient(135deg,#0e0e0e,#151515);
-      border-radius:35px;
-      padding:70px;
-      margin-top:60px;
-      border:1px solid rgba(255,255,255,0.08);
-      text-align:center;
-    }
-
-    .speech h2{
-      font-size:55px;
-      margin-bottom:25px;
-      color:#6fff8c;
-    }
-
-    .speech p{
-      font-size:20px;
-      line-height:1.8;
-      color:#d0d0d0;
-    }
-
-    .join-box{
-      background:linear-gradient(135deg,#16361f,#0b0b0b);
-      padding:70px;
-      border-radius:35px;
-      text-align:center;
-      margin-top:80px;
-      border:1px solid rgba(255,255,255,0.1);
-    }
-
-    .join-box h2{
-      font-size:60px;
-      margin-bottom:20px;
-    }
-
-    .join-box p{
-      color:#d3d3d3;
-      margin-bottom:35px;
-      line-height:1.8;
-    }
-
-    footer{
-      text-align:center;
-      padding:45px 20px;
-      border-top:1px solid rgba(255,255,255,0.08);
-      color:#9d9d9d;
-      background:black;
-    }
-    .nancy{
-      max-width:400px;
-      margin: auto;
-      background:linear-gradient(135deg,#252222,#3c3e0a);
-      padding:30px;
-      border-radius:20px;
-      border:1px solid rgba(255, 255, 255, 0.252);
-      text-align: center;
-    }
-
-    @media(max-width:900px){
-      .hero h1{
-        font-size:58px;
-      }
-
-      .section-title,
-      .join-box h2,
-      .speech h2{
-        font-size:42px;
-      }
-
-      .speech,
-      .join-box{
-        padding:40px 25px;
-      }
-
-      .nav-links{
-        display:none;
-      }
-    }
-
-    @media(max-width:600px){
-      .hero h1{
-        font-size:42px;
-      }
-
-      .hero p{
-        font-size:16px;
-      }
-
-      .section-title{
-        font-size:35px;
-      }
-      
-    }
-    input{
-      border-radius: 3px;
-    }
-    label{
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      font-size: 14px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shukla Janta Party</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#f4f7fb;color:#222;line-height:1.6}
+header{background:#0b3d91;color:#fff;padding:18px 5%;position:sticky;top:0}
+nav{display:flex;justify-content:space-between;align-items:center}
+nav a{color:#fff;text-decoration:none;margin-left:15px}
+.hero{background:linear-gradient(135deg,#0b3d91,#1976d2);color:white;padding:100px 20px;text-align:center}
+.btn{display:inline-block;background:white;color:#0b3d91;padding:12px 25px;border-radius:30px;text-decoration:none;margin-top:20px}
+section{padding:60px 8%}
+h2{text-align:center;margin-bottom:25px;color:#0b3d91}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center}
+.stat{background:white;padding:25px;border-radius:12px;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.counter{font-size:32px;font-weight:bold;color:#0b3d91}
+form{display:grid;gap:10px;max-width:600px;margin:auto}
+input,textarea{padding:12px;border:1px solid #ccc;border-radius:8px}
+button{padding:12px;background:#0b3d91;color:#fff;border:none;border-radius:8px}
+footer{background:#111;color:#fff;text-align:center;padding:30px}
+.coming{background:#eef5ff}
+</style>
 </head>
 <body>
+<header>
+<nav>
+<h1>शुक्ला जनता पार्टी</h1>
+<div>
+<a href="#about">About</a>
+<a href="#mission">Mission</a>
+<a href="#donate">Donate</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
 
-  <nav>
-    <div class="nav-container">
-      <div class="logo">SJP INDIA</div>
+<section class="hero">
+<h1>सेवा • सम्मान • न्याय</h1>
+<p>जनसेवा, जागरूकता और सामाजिक सहयोग के लिए समर्पित पहल</p>
+<a href="#join" class="btn">Join Movement</a>
+</section>
 
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#manifesto">Manifesto</a>
-        <a href="#movement">Movement</a>
-        <a href="#join">Join</a>
-      </div>
-    </div>
-  </nav>
+<section id="about">
+<h2>हमारे बारे में</h2>
+<p>शुक्ला जनता पार्टी एक सामाजिक जनकल्याण पहल है जो जरूरतमंद लोगों की सहायता, जागरूकता और समाज में सकारात्मक बदलाव के लिए कार्य करने का संकल्प रखती है।</p>
+</section>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="tag">Public Awareness • Youth Voice • Digital Reform</div>
+<section id="mission">
+<h2>हमारा मिशन</h2>
+<div class="cards">
+<div class="card">गरीबों की सहायता</div>
+<div class="card">शिक्षा और जागरूकता</div>
+<div class="card">युवा सशक्तिकरण</div>
+<div class="card">सामाजिक न्याय</div>
+</div>
+</section>
 
-      <h1>
-        SJP <span>Movement</span>
-      </h1>
+<section>
+<h2>हमारा प्रभाव</h2>
+<div class="stats">
+<div class="stat"><div class="counter" data-target="10000">0</div>People Reached</div>
+<div class="stat"><div class="counter" data-target="500">0</div>Campaigns</div>
+<div class="stat"><div class="counter" data-target="100">0</div>Support Drives</div>
+<div class="stat"><div class="counter" data-target="24">0</div>Hours Support</div>
+</div>
+</section>
 
-      <p>
-        SJP is a youth-driven awareness movement focused on digital literacy, corruption awareness, mental health conversations, employment issues, and responsible social media culture.
-      </p>
+<section id="donate">
+<h2>Donation</h2>
+<p style="text-align:center">समाज सेवा कार्यों के लिए सहयोग करें।</p>
+<div style="text-align:center"><a class="btn" href="#">Donate Now</a></div>
+</section>
 
-      <div class="buttons">
-        <a href="#join" class="btn btn-primary">Join The Movement</a>
-        <a href="#manifesto" class="btn btn-secondary">Read Vision</a>
-      </div>
+<section id="join">
+<h2>Join Us</h2>
+<form>
+<input placeholder="नाम">
+<input placeholder="ईमेल">
+<textarea placeholder="आप क्यों जुड़ना चाहते हैं?"></textarea>
+<button type="button">Submit</button>
+</form>
+</section>
 
-      <div class="stats">
-        <div class="card">
-          <h2>10K+</h2>
-          <p>Youth Voices Connected</p>
-        </div>
+<section class="coming">
+<h2>Coming Soon</h2>
+<div class="cards">
+<div class="card">Scholarship Program</div>
+<div class="card">Legal Help Desk</div>
+<div class="card">Employment Support</div>
+<div class="card">Health Camps</div>
+<div class="card">Women Empowerment</div>
+<div class="card">Disaster Relief</div>
+</div>
+</section>
 
-        <div class="card">
-          <h2>500+</h2>
-          <p>Community Discussions</p>
-        </div>
+<section id="contact">
+<h2>Contact Us</h2>
+<form>
+<input placeholder="Your Name">
+<input placeholder="Email">
+<textarea placeholder="Message"></textarea>
+<button type="button">Send Message</button>
+</form>
+</section>
 
-        <div class="card">
-          <h2>24/7</h2>
-          <p>Digital Awareness</p>
-        </div>
+<footer>
+<h3>शुक्ला जनता पार्टी</h3>
+<p>सेवा हमारा कर्तव्य, न्याय हमारा संकल्प</p>
+</footer>
 
-        <div class="card">
-          <h2>100%</h2>
-          <p>Independent Platform</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="manifesto">
-    <h2 class="section-title">Our Vision</h2>
-
-    <p class="section-sub">
-      SJP is not created only for memes. It was created as a satire movement that reflects real frustrations of common people — corruption, blind politics, online manipulation, fake nationalism, unemployment, mental pressure, and social division. Through humor and symbolic characters, we raise real issues that affect ordinary citizens every day.
-    </p>
-
-    <div class="manifesto-grid">
-
-      <div class="manifesto-card">
-        <h3>⚖️ Against Corruption</h3>
-        <p>
-          SJP stands against every form of corruption — whether political, social, corporate, or digital. Common people deserve transparency, honesty, and accountability from those in power.
-        </p>
-      </div>
-
-      <div class="manifesto-card">
-        <h3>🧠 Mental Health Awareness</h3>
-        <p>
-          The youth are under pressure from studies, jobs, social media comparison, loneliness, and uncertainty. SJP supports open conversations about mental health and emotional well-being.
-        </p>
-      </div>
-
-      <div class="manifesto-card">
-        <h3>📚 Education & Skill Development</h3>
-        <p>
-          Degrees alone are not enough. Real-world skills, digital literacy, technology education, cybersecurity awareness, and creative opportunities should be accessible to everyone.
-        </p>
-      </div>
-
-      <div class="manifesto-card">
-        <h3>💼 Employment & Youth Support</h3>
-        <p>
-          Millions of young people struggle with unemployment and financial pressure. SJP believes the youth deserve opportunities based on talent, not connections.
-        </p>
-      </div>
-
-      <div class="manifesto-card">
-        <h3>📱 Responsible Social Media</h3>
-        <p>
-          Social media should not become a weapon of hate, misinformation, addiction, or manipulation. SJP promotes awareness, responsible content, and digital balance.
-        </p>
-      </div>
-
-      <div class="manifesto-card">
-        <h3>🇮🇳 Unity Beyond Division</h3>
-        <p>
-          Religion, language, caste, and region should never be used to divide ordinary people for political benefit. SJP believes citizens deserve unity, dignity, and mutual respect.
-        </p>
-      </div>
-
-      <div class="manifesto-card">
-        <h3>🎭 Satire With Meaning</h3>
-        <p>
-          Humor is powerful when it exposes reality. SJP uses satire not to spread hate, but to encourage critical thinking, awareness, and discussion.
-        </p>
-      </div>
-
-      <div class="manifesto-card">
-        <h3>🌍 Future-Focused Thinking</h3>
-        <p>
-          Technology, AI, cybersecurity, climate awareness, and digital safety will shape the future. Young people must be prepared for the world ahead.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="speech" id="movement">
-      <h2>The Real Message</h2>
-
-      <p>
-        “SJP INDIA is not about spreading fear or blind propaganda. It is a creative protest against negativity, manipulation, corruption, and social division. Through satire, we speak about the frustrations that millions quietly feel every day.”
-      </p>
-    </div>
-
-    <div class="join-box" id="join">
-      <h2>Join The Movement</h2>
-
-      <p>
-        If you believe humor can expose truth, if you believe youth deserve opportunities, and if you believe society needs awareness instead of blind hatred — then this movement belongs to you.
-      </p>
-
-      <a href="https://www.instagram.com/shukla.janta.party/" class="btn btn-primary">Become A Member</a>
-    </div>
-  </section>
-  <form class="nancy">
-  
-  <label for="fname"> First Name:</label>  <br>
-  <input type="text" id="fname" name="fname" placeholder="First Name">
-  <br>
-  <label for="lname"> Last Name:</label> <br>
-  <input type="text" id="lname" name="lname" placeholder="Last Name">
-<br>
-  <label for="email"> Email:</label> <br>
-  <input type="email" id="email" name="email" placeholder="Email">
-    <br>
-  <label for="Contact"> Contact Number:</label> <br>
-  <input type="tel" id="Contact" name="Contact" placeholder="Contact Number">
-<br>
-  <input type="submit" value="Submit">
-
-
-  </form>
-  <footer>
-    © 2026 SJP — Independent Public Awareness Movement<br><br>
-    “Awareness, Unity & Independent Thinking.”
-  </footer>
-
+<script>
+document.querySelectorAll('.counter').forEach(c=>{
+let t=+c.dataset.target,n=0;
+let i=setInterval(()=>{
+n+=Math.ceil(t/100);
+if(n>=t){n=t;clearInterval(i);}
+c.textContent=n+"+";
+},20);
+});
+</script>
 </body>
 </html>
