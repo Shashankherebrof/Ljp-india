@@ -1,0 +1,797 @@
+:root{
+--primary:#0B3D91;
+--gold:#D4AF37;
+--bg:#050505;
+--card:#0d0d0d;
+--text:#ffffff;
+--muted:#cfcfcf;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+
+backdrop-filter:blur(15px);
+
+background:rgba(0,0,0,.6);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-container{
+max-width:1400px;
+margin:auto;
+
+padding:18px 20px;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:800;
+letter-spacing:1px;
+color:var(--gold);
+}
+
+.nav-links{
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+font-size:15px;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:var(--gold);
+}
+
+/* =======================
+   HERO
+======================= */
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:38px;
+line-height:1.1;
+}
+
+.hero p{
+font-size:15px;
+line-height:1.7;
+}
+
+.tag{
+font-size:12px;
+}
+
+.btn{
+width:100%;
+max-width:280px;
+}
+
+}
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding:140px 20px 80px;
+
+background:
+radial-gradient(
+circle at top,
+rgba(11,61,145,.45),
+#050505 60%
+);
+}
+
+.hero-content{
+max-width:950px;
+}
+
+.tag{
+display:inline-block;
+
+padding:10px 18px;
+
+border-radius:40px;
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+margin-bottom:25px;
+
+font-size:14px;
+
+color:var(--gold);
+}
+
+.hero h1{
+
+font-size:85px;
+
+font-weight:800;
+
+line-height:1;
+
+margin-bottom:25px;
+}
+
+.hero h1 span{
+color:var(--gold);
+
+text-shadow:
+0 0 25px rgba(212,175,55,.35);
+}
+
+.hero p{
+
+font-size:20px;
+
+line-height:1.9;
+
+color:var(--muted);
+
+max-width:760px;
+
+margin:auto;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+
+.buttons{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+}
+
+.btn{
+
+padding:16px 32px;
+
+border-radius:50px;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.3s;
+}
+
+.btn-primary{
+
+background:var(--primary);
+
+color:white;
+
+box-shadow:
+0 10px 30px rgba(11,61,145,.35);
+}
+
+.btn-primary:hover{
+
+transform:translateY(-5px);
+}
+
+.btn-secondary{
+
+background:transparent;
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+}
+
+.btn-secondary:hover{
+
+background:white;
+
+color:black;
+}
+/* =======================
+   STATS SECTION
+======================= */
+
+.stats{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+margin-top:90px;
+}
+
+.card{
+
+background:
+rgba(255,255,255,.03);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:24px;
+
+transition:.35s;
+
+backdrop-filter:blur(10px);
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+box-shadow:
+0 15px 40px rgba(212,175,55,.08);
+}
+
+.card h2{
+
+font-size:55px;
+
+margin-bottom:10px;
+
+color:var(--gold);
+}
+
+.card p{
+
+color:#d0d0d0;
+}
+
+/* =======================
+   GENERAL SECTIONS
+======================= */
+
+.section{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:120px 20px;
+}
+
+.section-title{
+
+font-size:60px;
+
+font-weight:800;
+
+text-align:center;
+
+margin-bottom:20px;
+
+background:
+linear-gradient(
+90deg,
+#ffffff,
+#D4AF37
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.section-sub{
+
+max-width:800px;
+
+margin:0 auto 60px;
+
+text-align:center;
+
+line-height:1.9;
+
+color:#c4c4c4;
+}
+
+/* =======================
+   MANIFESTO GRID
+======================= */
+
+.manifesto-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+}
+
+/* =======================
+   MANIFESTO CARD
+======================= */
+
+.manifesto-card{
+
+background:var(--card);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+padding:35px;
+
+border-radius:28px;
+
+position:relative;
+
+overflow:hidden;
+
+transition:.35s;
+}
+
+.manifesto-card::before{
+
+content:'';
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+
+background:
+rgba(212,175,55,.08);
+
+top:-80px;
+right:-80px;
+}
+
+.manifesto-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+box-shadow:
+0 15px 40px rgba(212,175,55,.08);
+}
+
+.manifesto-card h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:var(--gold);
+}
+
+.manifesto-card p{
+
+line-height:1.8;
+
+color:#d2d2d2;
+}
+
+/* =======================
+   IMPACT CARDS
+======================= */
+
+#impact .card{
+
+text-align:center;
+}
+
+#impact .card h2{
+
+font-size:48px;
+}
+
+/* =======================
+   DONATION SECTION
+======================= */
+
+#donate .join-box{
+
+background:
+linear-gradient(
+135deg,
+rgba(11,61,145,.35),
+#0b0b0b
+);
+
+border:
+1px solid rgba(255,255,255,.08);
+}
+
+/* =======================
+   JOIN BOX
+======================= */
+
+.join-box{
+
+padding:70px;
+
+border-radius:35px;
+
+text-align:center;
+
+margin-top:80px;
+
+background:
+linear-gradient(
+135deg,
+rgba(11,61,145,.25),
+#0b0b0b
+);
+
+border:
+1px solid rgba(255,255,255,.08);
+}
+
+.join-box h2{
+
+font-size:60px;
+
+margin-bottom:20px;
+}
+
+.join-box p{
+
+color:#d3d3d3;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+max-width:850px;
+
+margin-left:auto;
+margin-right:auto;
+}
+
+/* =======================
+   CONTACT SECTION TITLE
+======================= */
+
+#contact .section-title{
+
+margin-bottom:15px;
+}
+
+#contact .section-sub{
+
+margin-bottom:40px;
+}
+/* =======================
+   CONTACT FORM
+======================= */
+
+.nancy{
+
+max-width:550px;
+
+margin:60px auto;
+
+background:#0f0f0f;
+
+padding:40px;
+
+border-radius:24px;
+
+border:
+1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.25);
+}
+
+.nancy label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-size:14px;
+
+font-weight:500;
+
+color:#d5d5d5;
+}
+
+.nancy input{
+
+width:100%;
+
+padding:14px;
+
+border-radius:12px;
+
+border:
+1px solid rgba(255,255,255,.08);
+
+background:#161616;
+
+color:white;
+
+outline:none;
+
+margin-bottom:18px;
+
+transition:.3s;
+}
+
+.nancy input:focus{
+
+border-color:var(--gold);
+
+box-shadow:
+0 0 0 3px rgba(212,175,55,.12);
+}
+
+.nancy input[type="submit"]{
+
+background:var(--primary);
+
+border:none;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s;
+}
+
+.nancy input[type="submit"]:hover{
+
+transform:translateY(-3px);
+
+background:#082d6e;
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer{
+
+background:#030303;
+
+padding:45px 20px;
+
+text-align:center;
+
+border-top:
+1px solid rgba(255,255,255,.08);
+
+color:#bdbdbd;
+
+margin-top:80px;
+}
+
+footer p{
+
+line-height:1.8;
+}
+
+/* =======================
+   SCROLL ANIMATION
+======================= */
+
+.card,
+.manifesto-card,
+.join-box,
+.nancy{
+
+animation:fadeUp .8s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(25px);
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+}
+}
+
+/* =======================
+   SCROLLBAR
+======================= */
+
+::-webkit-scrollbar{
+
+width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+background:#080808;
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--primary);
+
+border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--gold);
+}
+
+/* =======================
+   MOBILE RESPONSIVE
+======================= */
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:58px;
+}
+
+.section-title,
+.join-box h2{
+
+font-size:42px;
+}
+
+.nav-links{
+
+display:none;
+}
+
+.join-box{
+
+padding:45px 25px;
+}
+
+.card h2{
+
+font-size:42px;
+}
+}
+
+@media(max-width:600px){
+
+.hero{
+
+padding-top:120px;
+}
+
+.hero h1{
+
+font-size:42px;
+}
+
+.hero p{
+
+font-size:16px;
+}
+
+.section{
+
+padding:80px 20px;
+}
+
+.section-title{
+
+font-size:34px;
+}
+
+.card,
+.manifesto-card{
+
+padding:25px;
+}
+
+.join-box{
+
+padding:35px 20px;
+}
+
+.join-box h2{
+
+font-size:32px;
+}
+
+.nancy{
+
+padding:25px;
+}
+}
+
+/* =======================
+   PREMIUM HOVER EFFECTS
+======================= */
+
+.btn,
+.card,
+.manifesto-card{
+
+will-change:transform;
+}
+
+.btn:hover{
+
+transform:
+translateY(-4px);
+}
+
+.logo{
+
+transition:.3s;
+}
+
+.logo:hover{
+
+color:white;
+}

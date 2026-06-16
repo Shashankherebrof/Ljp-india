@@ -1,436 +1,545 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shukla Janta Party</title>
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',sans-serif;
-}
+<title>Shukla Janta Party | SJP India</title>
 
-body{
-background:#f8f9fc;
-color:#222;
-}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-header{
-background:#0B3D91;
-color:white;
-padding:20px 8%;
-position:sticky;
-top:0;
-z-index:1000;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-}
+<link rel="stylesheet" href="style.css">
 
-.logo{
-font-size:28px;
-font-weight:700;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:20px;
-}
-
-nav ul li a{
-color:white;
-text-decoration:none;
-}
-
-.hero{
-height:90vh;
-background:linear-gradient(rgba(11,61,145,.85),rgba(11,61,145,.85)),
-url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-color:white;
-padding:20px;
-}
-
-.hero-content{
-max-width:900px;
-}
-
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 35px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
-margin:10px;
-}
-
-.btn-primary{
-background:white;
-color:#0B3D91;
-}
-
-.btn-secondary{
-border:2px solid white;
-color:white;
-}
-
-section{
-padding:80px 8%;
-}
-
-.title{
-text-align:center;
-font-size:40px;
-color:#0B3D91;
-margin-bottom:40px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.card h3{
-margin-bottom:15px;
-color:#0B3D91;
-}
-
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.stat{
-background:white;
-padding:30px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-}
-
-.stat h2{
-font-size:40px;
-color:#0B3D91;
-}
-
-.testimonial{
-background:white;
-padding:25px;
-border-left:5px solid #0B3D91;
-border-radius:10px;
-}
-
-.contact-form{
-max-width:700px;
-margin:auto;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-padding:15px;
-margin-bottom:15px;
-border:1px solid #ddd;
-border-radius:10px;
-}
-
-.contact-form button{
-background:#0B3D91;
-color:white;
-padding:15px 30px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-@media(max-width:768px){
-
-.hero h1{
-font-size:40px;
-}
-
-nav{
-flex-direction:column;
-gap:15px;
-}
-
-nav ul{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-}
-</style>
 </head>
 
 <body>
 
-<header>
+<!-- NAVBAR -->
+
 <nav>
 
+<div class="nav-container">
+
 <div class="logo">
-SHUKLA JANTA PARTY
+SJP INDIA
 </div>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#mission">Mission</a></li>
-<li><a href="#impact">Impact</a></li>
-<li><a href="#donate">Donate</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+<div class="nav-links">
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#vision">Vision</a>
+
+<a href="#mission">Mission</a>
+
+<a href="#impact">Impact</a>
+
+<a href="#join">Join</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
 
 </nav>
-</header>
 
-<section class="hero">
+<!-- HERO SECTION -->
+
+<section class="hero" id="home">
 
 <div class="hero-content">
 
-<h1>Service • Respect • Justice</h1>
+<div class="tag">
+Public Service • Youth Development • Social Awareness
+</div>
+
+<h1>
+
+Shukla
+
+<span>Janta Party</span>
+
+</h1>
 
 <p>
-Serving People, Strengthening Society.
-Helping those in need and building a better future together.
+
+A community-driven public service initiative focused on
+education, youth opportunities, awareness, social justice,
+and helping people in need.
+
+Together we aim to build a stronger,
+informed and united society.
+
 </p>
 
-<a href="#about" class="btn btn-primary">
-Learn More
+<div class="buttons">
+
+<a href="#vision" class="btn btn-primary">
+
+Read Our Vision
+
 </a>
 
 <a href="#join" class="btn btn-secondary">
+
 Join Movement
+
 </a>
 
 </div>
 
-</section>
-
-<section id="about">
-
-<h2 class="title">About Us</h2>
+<div class="stats">
 
 <div class="card">
 
+<h2 class="counter" data-target="10000">0</h2>
+
+<p>People Reached</p>
+
+</div>
+
+<div class="card">
+
+<h2 class="counter" data-target="500">0</h2>
+
+<p>Awareness Campaigns</p>
+
+</div>
+
+<div class="card">
+
+<h2 class="counter" data-target="100">0</h2>
+
+<p>Community Initiatives</p>
+
+</div>
+
+<div class="card">
+
+<h2>24/7</h2>
+
+<p>Support Network</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section class="section" id="about">
+
+<h2 class="section-title">
+About Us
+</h2>
+
+<p class="section-sub">
+
+Shukla Janta Party is a community-focused public service initiative.
+
+Our mission is to encourage awareness,
+support youth,
+promote education,
+help people in need,
+and build a stronger society through positive action.
+
+</p>
+
+</section>
+
+<!-- VISION SECTION -->
+
+<section class="section" id="vision">
+
+<h2 class="section-title">
+Our Vision
+</h2>
+
+<p class="section-sub">
+
+We envision a society where every citizen has access to opportunity,
+education,
+support,
+and justice.
+
+We believe real change begins with awareness,
+responsibility,
+and community participation.
+
+</p>
+
+<div class="manifesto-grid">
+
+<div class="manifesto-card">
+
+<h3>📚 Education & Learning</h3>
+
 <p>
-
-Shukla Janta Party is a community-focused social initiative dedicated to helping people in need, raising awareness, supporting youth, promoting justice, and encouraging positive social change.
-
-हमारा उद्देश्य समाज सेवा, जनजागरूकता और जरूरतमंद लोगों की सहायता करना है।
-
+Promoting quality education,
+skill development,
+and lifelong learning opportunities.
 </p>
 
 </div>
 
+<div class="manifesto-card">
+
+<h3>💼 Employment Support</h3>
+
+<p>
+Helping youth prepare for future careers,
+entrepreneurship,
+and professional growth.
+</p>
+
+</div>
+
+<div class="manifesto-card">
+
+<h3>⚖ Social Justice</h3>
+
+<p>
+Supporting fairness,
+equality,
+and dignity for every individual.
+</p>
+
+</div>
+
+<div class="manifesto-card">
+
+<h3>🤝 Community Welfare</h3>
+
+<p>
+Encouraging people to help each other
+and strengthen local communities.
+</p>
+
+</div>
+
+<div class="manifesto-card">
+
+<h3>🌐 Digital Awareness</h3>
+
+<p>
+Promoting responsible internet use,
+cyber safety,
+and digital literacy.
+</p>
+
+</div>
+
+<div class="manifesto-card">
+
+<h3>🇮🇳 National Development</h3>
+
+<p>
+Supporting ideas and initiatives
+that contribute positively to society and the nation.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="mission">
+<!-- MISSION SECTION -->
 
-<h2 class="title">Our Mission</h2>
+<section class="section" id="mission">
 
-<div class="cards">
+<h2 class="section-title">
+Our Mission
+</h2>
 
-<div class="card">
-<h3>🤝 Community Support</h3>
-<p>Helping families and individuals in need.</p>
+<div class="manifesto-grid">
+
+<div class="manifesto-card">
+
+<h3>❤️ Help People In Need</h3>
+
+<p>
+Supporting families,
+students,
+and individuals facing difficulties.
+</p>
+
 </div>
 
-<div class="card">
-<h3>📚 Education</h3>
-<p>Promoting awareness and learning opportunities.</p>
+<div class="manifesto-card">
+
+<h3>🧠 Awareness First</h3>
+
+<p>
+Encouraging informed decisions,
+critical thinking,
+and responsible citizenship.
+</p>
+
 </div>
 
-<div class="card">
-<h3>⚖ Justice</h3>
-<p>Raising voice against injustice.</p>
+<div class="manifesto-card">
+
+<h3>🎓 Youth Empowerment</h3>
+
+<p>
+Creating opportunities for young people
+to learn,
+lead,
+and grow.
+</p>
+
 </div>
 
-<div class="card">
-<h3>❤️ Social Welfare</h3>
-<p>Creating a stronger and united society.</p>
+<div class="manifesto-card">
+
+<h3>🤝 Unity & Respect</h3>
+
+<p>
+Promoting harmony,
+mutual respect,
+and cooperation among communities.
+</p>
+
 </div>
 
 </div>
 
 </section>
 
-<section id="impact">
+<!-- IMPACT SECTION -->
 
-<h2 class="title">Impact</h2>
+<section class="section" id="impact">
+
+<h2 class="section-title">
+Our Impact
+</h2>
+
+<p class="section-sub">
+
+Small actions create meaningful change.
+Together we can build stronger communities and better opportunities.
+
+</p>
 
 <div class="stats">
 
-<div class="stat">
+<div class="card">
 <h2>10K+</h2>
 <p>People Reached</p>
 </div>
 
-<div class="stat">
+<div class="card">
 <h2>500+</h2>
-<p>Awareness Drives</p>
+<p>Community Discussions</p>
 </div>
 
-<div class="stat">
+<div class="card">
 <h2>100+</h2>
-<p>Community Initiatives</p>
+<p>Awareness Programs</p>
 </div>
 
-<div class="stat">
+<div class="card">
 <h2>24/7</h2>
-<p>Support Network</p>
+<p>Community Support</p>
 </div>
 
 </div>
 
 </section>
 
-<section id="donate">
+<!-- DONATION SECTION -->
 
-<h2 class="title">Support Our Mission</h2>
+<section class="section" id="donate">
 
-<div class="card" style="text-align:center;">
+<h2 class="section-title">
+Support Our Mission
+</h2>
+
+<p class="section-sub">
+
+Your support helps us expand future education drives,
+community initiatives,
+awareness campaigns,
+and public service programs.
+
+</p>
+
+<div class="join-box">
+
+<h2>
+Donate Program
+</h2>
 
 <p>
 
-Your support helps us expand future community initiatives.
+We are currently preparing our donation system.
+
+The donation facility will be available soon.
+
+Thank you for supporting our mission.
+
+</p>
+
+<button
+class="btn btn-primary"
+onclick="donationMessage()">
+
+Donate Now
+
+</button>
+
+</div>
+
+</section>
+
+<!-- JOIN SECTION -->
+
+<section class="section" id="join">
+
+<div class="join-box">
+
+<h2>
+Join The Movement
+</h2>
+
+<p>
+
+If you believe in awareness,
+education,
+community support,
+and positive social change,
+
+become a part of this initiative.
+
+</p>
+
+<a
+href="https://www.instagram.com/"
+class="btn btn-primary">
+
+Become A Member
+
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="section" id="contact">
+
+<h2 class="section-title">
+Contact Us
+</h2>
+
+<p class="section-sub">
+
+Have suggestions,
+ideas,
+or questions?
+
+We would love to hear from you.
+
+</p>
+
+<form class="nancy">
+
+<label for="fname">
+First Name
+</label>
+
+<input
+type="text"
+id="fname"
+placeholder="Enter First Name">
+
+<label for="lname">
+Last Name
+</label>
+
+<input
+type="text"
+id="lname"
+placeholder="Enter Last Name">
+
+<label for="email">
+Email Address
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter Email">
+
+<label for="contact">
+Contact Number
+</label>
+
+<input
+type="tel"
+id="contact"
+placeholder="Enter Contact Number">
+
+<input
+type="submit"
+value="Submit">
+
+<p style="margin-top:15px;color:#9a9a9a;font-size:14px;">
+
+Your information will only be used
+for updates and communication.
+
+</p>
+
+</form>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div style="font-size:24px;font-weight:700;margin-bottom:15px;">
+SJP INDIA
+</div>
+
+<p>
+
+Serving People • Building Trust
 
 </p>
 
 <br>
 
-<button onclick="donationMessage()" class="contact-form button">
-Donate Now
-</button>
+<p>
 
-</div>
+"Seva Hamara Kartavya,
+Nyay Hamara Sankalp"
 
-</section>
+</p>
 
-<section>
-
-<h2 class="title">Testimonials</h2>
-
-<div class="cards">
-
-<div class="testimonial">
-"Great initiative focused on helping people."
-</div>
-
-<div class="testimonial">
-"Awareness and service should go hand in hand."
-</div>
-
-<div class="testimonial">
-"A positive platform for community support."
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="title">Upcoming Projects</h2>
-
-<div class="cards">
-
-<div class="card">
-Scholarship Program (Coming Soon)
-</div>
-
-<div class="card">
-Legal Help Desk (Coming Soon)
-</div>
-
-<div class="card">
-Employment Support (Coming Soon)
-</div>
-
-<div class="card">
-Health Camps (Coming Soon)
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<h2 class="title">Contact Us</h2>
-
-<div class="contact-form">
-
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Email Address">
-
-<textarea rows="5" placeholder="Your Message"></textarea>
-
-<button>
-Send Message
-</button>
-
-</div>
-
-</section>
-
-<footer>
-
-<h3>SHUKLA JANTA PARTY</h3>
+<br>
 
 <p>
-Seva Hamara Kartavya, Nyay Hamara Sankalp.
+
+© 2026 Shukla Janta Party
+
 </p>
 
 </footer>
 
-<script>
-function donationMessage(){
-
-alert(
-"Donation Program Coming Soon\\n\\nWe have not started accepting donations yet.\\nThe donation facility will be available soon.\\n\\nThank You."
-);
-
-}
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
