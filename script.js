@@ -1,22 +1,8 @@
 // =======================
-// DONATION POPUP
+// DONATION Section
 // =======================
 
-function donationMessage(){
 
-alert(
-
-"Donation Program Coming Soon\n\n" +
-
-"We have not started accepting donations yet.\n" +
-
-"बहुत जल्द donation facility शुरू की जाएगी.\n\n" +
-
-"Thank you for supporting our mission."
-
-);
-
-}
 
 // =======================
 // CONTACT FORM
@@ -423,3 +409,42 @@ rippleStyle
 console.log(
 "Shukla Janta Party Website Loaded Successfully"
 );
+
+
+
+// api integration //
+
+const scriptURL = "https://script.google.com/macros/s/AKfycbwqUvby4WeYw06KJT-idmtyV4oBAXVGysyYwuI4M4BamULIBm8GlBBWuXwA8OMv4YKhvA/exec";
+
+document
+.getElementById("joinForm")
+.addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value
+    };
+
+    try{
+
+        await fetch(scriptURL,{
+            method:"POST",
+            body: JSON.stringify(data)
+        });
+
+        alert("Form Submitted Successfully!");
+
+        this.reset();
+
+    }catch(error){
+
+        alert("Something went wrong!");
+
+        console.error(error);
+
+    }
+
+});
